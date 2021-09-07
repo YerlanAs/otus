@@ -9,7 +9,7 @@ public class TestExcept {
         TaskManager taskManager = new TaskManager();
         taskManager.addTask(new QuadraticEquation());
         taskManager.addTask(new TriangleArea());
-        int selectIndex = 0;
+        int selectIndex;
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             System.out.println(taskManager.getTaskList());
 
@@ -22,7 +22,7 @@ public class TestExcept {
         } catch (CalcException e) {
             System.out.println("Ошибка при вычислении: " + e.getsMessage());
         }
-        finally {
+        finally  {
             System.out.println("Работа программы завершена.");
         }
 
